@@ -1,0 +1,31 @@
+spring:
+  profiles:
+    active:
+      - dev
+
+---
+server:
+  port: 8201
+
+spring:
+  profiles: dev
+  application:
+    name: cloud-config-dev
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+---
+server:
+  port: 8202
+
+spring:
+  profiles: test
+  application:
+    name: cloud-config-test
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
