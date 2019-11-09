@@ -1,15 +1,15 @@
-﻿spring: 
+spring: 
   profiles: 
     active: 
     - dev
     
----
+--- 
 spring: 
   profiles: dev
   application: 
     name: cloud-config-dev
     
----
+--- 
 spring: 
   profiles: test
   application: 
